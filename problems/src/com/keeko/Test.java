@@ -2,10 +2,10 @@ package com.keeko;
 
 public class Test {
     public static void main(String[] args) {
-        int[] nums = { 3, 2, 2, 3 };
-        int val = 3;
-        P0027RemoveElement p = new P0027RemoveElement();
-        int res = p.removeElement(nums, val);
+        int[] nums = { 1,3,5,6 };
+        int val = 5;
+        P0035SearchInsertPosition p = new P0035SearchInsertPosition();
+        int res = p.searchInsert(nums, val);
         System.out.println(res);
     }
 }
