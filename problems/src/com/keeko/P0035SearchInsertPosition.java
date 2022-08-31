@@ -22,6 +22,7 @@ package com.keeko;
   Runtime: 0 ms, faster than 100.00% of Java online submissions for Search Insert Position.
     Memory Usage: 43.2 MB, less than 68.74% of Java online submissions for Search Insert Position.
 * */
+/*
 public class P0035SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int n = nums.length;
@@ -47,5 +48,25 @@ public class P0035SearchInsertPosition {
             }
         }
         return 0;
+    }
+}
+*/
+
+/*
+* 二分查找
+* */
+public class P0035SearchInsertPosition {
+    public int searchInsert(int[] nums, int target) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l <= r) {
+            int guess = (l + r) >> 1; // 位移运算
+            if (nums[guess] >= target) {
+                r = guess - 1;
+            } else {
+                l = guess + 1;
+            }
+        }
+        return l;
     }
 }
